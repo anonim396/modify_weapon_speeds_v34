@@ -40,17 +40,6 @@ public void OnPluginStart()
 
 	if(!DHookEnableDetour(g_ResetMaxSpeed, false, Detour_ResetMaxSpeed))
 		SetFailState("Error enabling detour \"CCSPlayer::ResetMaxSpeed\"");
-	
-	RegConsoleCmd("wspeed", Cmd_WSpeed);
-}
-
-public Action Cmd_WSpeed(int client, int args)
-{
-	int weapon = GetEntPropEnt(client, Prop_Send, "m_hActiveWeapon");
-	if(weapon != -1)
-		PrintToChat(client, "Weapon Speed: %f", GetWeaponMaxSpeed(weapon));
-	
-	return Plugin_Handled;
 }
 
 stock float GetWeaponMaxSpeed(int weapon)
