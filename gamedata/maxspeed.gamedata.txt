@@ -1,0 +1,35 @@
+"Games"
+{
+	"cstrike"
+	{
+		"Signatures"
+		{
+			"CCSPlayer::ResetMaxSpeed"
+			{
+				"library"		"server"
+				"windows"		"\x51\x56\x57\x6A\x00\x68\x2A\x2A\x2A\x2A\x68\x2A\x2A\x2A\x2A\x6A\x00\x8B\xF1\xE8\x2A\x2A\x2A\x2A\x50\xE8\x2A\x2A\x2A\x2A\x8B\xF8\x8B\x86\xC0\x09\x00\x00"
+				"linux"			"@_ZN9CCSPlayer13ResetMaxSpeedEv"
+			}
+		}
+
+		"Offsets"
+		{
+			"CWeaponCSBase::GetMaxSpeed"
+			{
+				"windows"	"322"
+				"linux"		"323"
+			}
+		}
+
+		"Functions"
+		{
+			"CCSPlayer::ResetMaxSpeed"
+			{
+				"signature"		"CCSPlayer::ResetMaxSpeed"
+				"callconv"		"thiscall"
+				"this"			"entity"
+				"return"		"void"
+			}
+		}
+	}
+}
